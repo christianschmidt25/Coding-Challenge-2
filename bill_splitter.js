@@ -32,6 +32,6 @@ const bills = [275, 40, 430, 125, 555, 44]; //array from datasets 1 and 2
 const tips = bills.map(calculateTip); //uses calculateTip function from the bills array
 const totals = bills.map((bills, index) => bills+tips[index]); //adds the bills and tips
 
-console.log("Bills:", bills);
-console.log("Tips:", tips);
-console.log("Totals:", totals);
+console.log("Bills:", bills); //outputs bills
+console.log("Tips:", tips); //outputs the tips calculated from the bills
+console.log("Totals:", totals); //outputs the total bill values from the original bill and calculated tips summed up
