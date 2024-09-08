@@ -16,11 +16,22 @@ console.log(`Thank you for eating here. Your bill was $${x}, your tip was $${tip
 
 // Task 3: Create a Function (calculateTip)
 
-function calculateTip(testBill, tip) {
-    return (tip)
+function calculateTip(testBill) {
+    return ((50 <= testBill <= 300) ? testBill*.15 : testBill*.20)
 };
 
 let testBill = 100;
-console.log("Tip amount when the bill is $100 is", calculateTip(100,15));
+console.log("Tip amount when the bill is $100 is", calculateTip(100));
 
 //will return the tip amount (calculated by ternary operator in step 1) when this test bill is $100.
+
+
+// Task 4: Utilize Arrays
+
+const bills = [275, 40, 430, 125, 555, 44]; //array from datasets 1 and 2
+const tips = bills.map(calculateTip); //uses calculateTip function from the bills array
+const totals = bills.map((bills, index) => bills+tips[index]); //adds the bills and tips
+
+console.log("Bills:", bills);
+console.log("Tips:", tips);
+console.log("Totals:", totals);
